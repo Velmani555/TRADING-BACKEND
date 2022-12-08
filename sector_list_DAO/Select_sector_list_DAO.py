@@ -2,14 +2,14 @@ import datetime
 from dbconnection import DBConnection
 
 
-class SymbolSelectDAO:
-    def select_Symbol_DAO(self):
-        print('select operation')
+class SectorListSelectDAO:
+    def select_sector_list_DAO(self):
+        print('select Sector_list operation')
         dbconnection = DBConnection()
         connection = dbconnection.getconnection()
-        print('time_stamp_list_DAO')
+        print('Sector_list_DAO')
         cursor = connection.cursor()
-        statement = '''select * from time_stamp_list;'''
+        statement = '''select * from sector_list;'''
         cursor.execute(statement)
         minutelist = cursor.fetchall()
         for r in minutelist:
@@ -18,5 +18,5 @@ class SymbolSelectDAO:
         connection.close()
 
 
-symbolselectDAO = SymbolSelectDAO()
-symbolselectDAO.select_Symbol_DAO()
+sectorlistselectDAO = SectorListSelectDAO()
+sectorlistselectDAO.select_sector_list_DAO()

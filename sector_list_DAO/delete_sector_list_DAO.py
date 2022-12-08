@@ -2,16 +2,16 @@ import datetime
 from dbconnection import DBConnection
 
 
-class TimeStampListDeleteDAO:
-    def delete_time_stamp_list_DAO(self):
+class SectorListDeleteDAO:
+    def delete_sector_list_DAO(self):
         dbconnection = DBConnection()
         connection = dbconnection.getconnection()
         cursor = connection.cursor()
         cursor.execute(
-            '''delete from time_stamp_list where time_id=2;''')
+            '''delete from sector_list where sector_id=1;''')
         connection.commit()
         connection.close()
 
 
-timestamplistdeleteDAO = TimeStampListDeleteDAO()
-timestamplistdeleteDAO.delete_time_stamp_list_DAO()
+sectorlistdeleteDAO = SectorListDeleteDAO()
+sectorlistdeleteDAO.delete_sector_list_DAO()
