@@ -2,16 +2,16 @@ import datetime
 from dbconnection import DBConnection
 
 
-class SymbolDeleteDAO:
-    def delete_symbolDAO(self):
+class TimeStampListUpdateDAO:
+    def update_time_stamp_list_DAO(self):
         dbconnection = DBConnection()
         connection = dbconnection.getconnection()
         cursor = connection.cursor()
         cursor.execute(
-            '''delete from symbol_list where symbol_id=111;''')
+            '''update time_stamp_list set time_stamp="09:15" where time_id=3;''')
         connection.commit()
         connection.close()
 
 
-symboldeleteDAO = SymbolDeleteDAO()
-symboldeleteDAO.delete_symbolDAO()
+timestamplistDAO = TimeStampListUpdateDAO()
+timestamplistDAO.update_time_stamp_list_DAO()

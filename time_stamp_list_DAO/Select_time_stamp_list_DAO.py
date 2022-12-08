@@ -7,9 +7,9 @@ class SymbolSelectDAO:
         print('select operation')
         dbconnection = DBConnection()
         connection = dbconnection.getconnection()
-        print('Symbol_list')
+        print('time_stamp_list_DAO')
         cursor = connection.cursor()
-        statement = '''select * from symbol_list;'''
+        statement = '''select * from time_stamp_list;'''
         cursor.execute(statement)
         minutelist = cursor.fetchall()
         for r in minutelist:
